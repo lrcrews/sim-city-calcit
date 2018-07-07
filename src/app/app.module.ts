@@ -7,14 +7,16 @@ import { CalcitRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 @NgModule({
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     CalcitRoutingModule,
+    HttpModule,
   ],
   providers: [],
 })

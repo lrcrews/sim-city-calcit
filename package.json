@@ -10,7 +10,7 @@
     "circleci-test": "ng test --single-run --watch=false",
     "lint": "tslint \"src/app/**/*.ts\"",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "engines": {
