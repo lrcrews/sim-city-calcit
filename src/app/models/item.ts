@@ -25,7 +25,6 @@ export class Item {
         json["image_path"],
         Ingredient.arrayFromJsonArray(json["ingredients"]),
         json["key"],
-        json["market_price"],
         json["max_price"],
         json["name"]
       );
@@ -41,8 +40,6 @@ export class Item {
     public ingredients: Array<Ingredient>,
     // Unique identifier expected to be the same across environments
     public key: string,
-    // Default/Initial listing price in "Simoleons"
-    public marketPrice: number,
     // Highest allowed listing price in "Simoleons"
     public maxPrice: number,
     // The display name

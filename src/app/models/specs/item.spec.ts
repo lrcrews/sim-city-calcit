@@ -30,13 +30,10 @@ describe("Item", () => {
     });
 
     it("should return an Item instance for the given json", () => {
-      const item = Item.fromJson(
-        {image_path: "/flour_bag.png", key: "FLOUR_BAG", market_price: 437, max_price: 570, name: "Flour Bag"}
-      );
+      const item = Item.fromJson({image_path: "/flour_bag.png", key: "FLOUR_BAG", max_price: 570, name: "Flour Bag"});
       expect(item.imagePath).toEqual("/flour_bag.png");
       expect(item.ingredients).toEqual([]);
       expect(item.key).toEqual("FLOUR_BAG");
-      expect(item.marketPrice).toEqual(437);
       expect(item.maxPrice).toEqual(570);
       expect(item.name).toEqual("Flour Bag");
 
@@ -48,14 +45,12 @@ describe("Item", () => {
             {item_key: "TEXTILES", required_amount: 2}
           ],
           key: "FLOUR_BAG",
-          market_price: 437,
           max_price: 570,
           name: "Flour Bag"}
       );
       expect(itemWithIngredients.imagePath).toEqual("/flour_bag.png");
       expect(itemWithIngredients.ingredients).toEqual([ new Ingredient("SEEDS", 2), new Ingredient("TEXTILES", 2) ]);
       expect(itemWithIngredients.key).toEqual("FLOUR_BAG");
-      expect(itemWithIngredients.marketPrice).toEqual(437);
       expect(itemWithIngredients.maxPrice).toEqual(570);
       expect(itemWithIngredients.name).toEqual("Flour Bag");
     });

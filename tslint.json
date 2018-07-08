@@ -14,11 +14,6 @@
     ],
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "import-blacklist": [
-      true,
-      "rxjs",
-      "rxjs/Rx"
-    ],
     "max-line-length": [
       true,
       120
