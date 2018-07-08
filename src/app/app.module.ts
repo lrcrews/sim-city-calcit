@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { CalcitRoutingModule } from "./app-routing.module";
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from "./app-component/app.component";
 
 @NgModule({
   bootstrap: [
