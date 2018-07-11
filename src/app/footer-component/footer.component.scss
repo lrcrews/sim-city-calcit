@@ -1,0 +1,27 @@
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+section#footer-component {
+  background-color: $background-tile;
+  box-shadow: 1px 0 2px 1px rgba(70, 80, 100, 0.6);
+  width: 100%;
+
+  > ul {
+    padding: 24px 16px 0;
+
+    > li {
+      display: inline-block;
+      margin-right: -4px;
+      text-align: center;
+      vertical-align: bottom;
+      width: 25%;
+
+      @include small-font-style;
+    }
+  }
+
+  > footer {
+    padding: 40px 16px;
+
+    @include tiny-font-style;
+  }
+}

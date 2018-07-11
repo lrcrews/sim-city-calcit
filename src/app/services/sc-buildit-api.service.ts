@@ -6,25 +6,44 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
 import { Item } from "../models/item";
+import { Producer } from "../models/producer";
 
 @Injectable()
 export class ScBuilditApiService {
 
-  constructor(private http: Http) { }
+  constructor(private _http: Http) { }
 
   items(): Observable<Array<Item>> {
     const url = this._mockItemsJsonPath();
-    return this.http.get(url).pipe(map(this._onItemsResponse));
+    return this._http.get(url).pipe(map(this._onItemsResponse));
+  }
+
+  producers(): Observable<Array<Producer>> {
+    const url = this._mockProducersJsonPath();
+    return this._http.get(url).pipe(map(this._onProducersResponse));
   }
 
   private _mockItemsJsonPath(): string {
     return "../../assets/items-response.json";
   }
 
+  private _mockProducersJsonPath(): string {
+    return "../../assets/producers-response.json";
+  }
+
   private _onItemsResponse(response: Response): Array<Item> {
     const json = response.json();
     if (json) {
       return Item.arrayFromJsonArray(json["items"]);
+    } else {
+      return [];
+    }
+  }
+
+  private _onProducersResponse(response: Response): Array<Producer> {
+    const json = response.json();
+    if (json) {
+      return Producer.arrayFromJsonArray(json["producers"]);
     } else {
       return [];
     }

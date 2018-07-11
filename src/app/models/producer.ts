@@ -25,7 +25,6 @@ export class Producer {
         json["active_queues"],
         json["image_path"],
         json["key"],
-        json["level"],
         json["name"],
         TimeTable.arrayFromJsonArray(json["time_tables"])
       );
@@ -41,8 +40,6 @@ export class Producer {
     public imagePath: string,
     // Unique identifier expected to be the same across environments
     public key: string,
-    // The level of the Producer (i.e. 0 star [initial], 1 star, 2 star, or 3 star)
-    public level: number,
     // The display name
     public name: string,
     // The list of TimeTables that associate Items and their production times based on level

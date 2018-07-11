@@ -31,7 +31,7 @@ export class TimeTable {
   }
 
   constructor(
-    // The "star level" this TimeTable corresponds to
+    // The level of the Producer (i.e. 0 star [initial], 1 star, 2 star, or 3 star)
     public level: number,
     // The list of Timings for the corresponding level
     public timings: Array<Timing>

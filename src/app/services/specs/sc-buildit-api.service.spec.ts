@@ -30,4 +30,14 @@ describe("ScBuilditApiService", () => {
 
   });
 
+  describe("producers", () => {
+
+    it("should return an array of Producers", inject([ScBuilditApiService], (service: ScBuilditApiService) => {
+      service.producers().subscribe(producers => {
+        expect(producers).toBeDefined();
+      });
+    }));
+
+  });
+
 });

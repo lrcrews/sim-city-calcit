@@ -36,7 +36,6 @@ describe("Producer", () => {
       expect(producer.activeQueues).toEqual(1);
       expect(producer.imagePath).toEqual("/farmers_market.png");
       expect(producer.key).toEqual("FARMERS_MARKET");
-      expect(producer.level).toEqual(0);
       expect(producer.name).toEqual("Farmer's Market");
       expect(producer.timeTables).toEqual([]);
 
@@ -56,7 +55,6 @@ describe("Producer", () => {
       expect(producerWithTimeTables.activeQueues).toEqual(1);
       expect(producerWithTimeTables.imagePath).toEqual("/farmers_market.png");
       expect(producerWithTimeTables.key).toEqual("FARMERS_MARKET");
-      expect(producerWithTimeTables.level).toEqual(0);
       expect(producerWithTimeTables.name).toEqual("Farmer's Market");
       expect(producerWithTimeTables.timeTables).toEqual([ new TimeTable(0, []), new TimeTable(1, []) ]);
     });

@@ -677,7 +677,7 @@
           "required_amount":1
         }
       ],
-      "key": "FROZEN_YOGURT",
+      "key": "COFFEE",
       "max_price":750,
       "name":"Coffee"
     },
