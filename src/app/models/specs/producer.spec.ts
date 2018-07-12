@@ -61,4 +61,60 @@ describe("Producer", () => {
 
   });
 
+  describe("isFactory", () => {
+
+    it("should return true if the Producer has more than one active queue", () => {
+      const producer = Producer.fromJson(
+        {active_queues: 2, image_path: "/small_factory.png", key: "SMALL_FACTORY", level: 0, name: "Small Factory"}
+      );
+      expect(producer.activeQueues).toEqual(2);
+      expect(producer.isFactory()).toBeTruthy();
+    });
+
+    it("should return false if the Producer has only one active queue", () => {
+      const producer = Producer.fromJson(
+        {active_queues: 1, image_path: "/farmers_market.png", key: "FARMERS_MARKET", level: 0, name: "Farmer's Market"}
+      );
+      expect(producer.activeQueues).toEqual(1);
+      expect(producer.isFactory()).toBeFalsy();
+    });
+
+    it("should return false if the Producer's activeQueues value is nil", () => {
+      const producer = new Producer(undefined, undefined, undefined, undefined, undefined);
+      expect(producer.activeQueues).toBeUndefined();
+      expect(producer.isFactory()).toBeFalsy();
+      producer.activeQueues = null;
+      expect(producer.isFactory()).toBeFalsy();
+    });
+
+  });
+
+  describe("isShop", () => {
+
+    it("should return true if the Producer has only one active queue", () => {
+      const producer = Producer.fromJson(
+        {active_queues: 1, image_path: "/farmers_market.png", key: "FARMERS_MARKET", level: 0, name: "Farmer's Market"}
+      );
+      expect(producer.activeQueues).toEqual(1);
+      expect(producer.isShop()).toBeTruthy();
+    });
+
+    it("should return false if the Producer has more than one active queue", () => {
+      const producer = Producer.fromJson(
+        {active_queues: 2, image_path: "/small_factory.png", key: "SMALL_FACTORY", level: 0, name: "Small Factory"}
+      );
+      expect(producer.activeQueues).toEqual(2);
+      expect(producer.isShop()).toBeFalsy();
+    });
+
+    it("should return false if the Producer's activeQueues value is nil", () => {
+      const producer = new Producer(undefined, undefined, undefined, undefined, undefined);
+      expect(producer.activeQueues).toBeUndefined();
+      expect(producer.isShop()).toBeFalsy();
+      producer.activeQueues = null;
+      expect(producer.isShop()).toBeFalsy();
+    });
+
+  });
+
 });

@@ -46,4 +46,14 @@ export class Producer {
     public timeTables: Array<TimeTable>
   ) {}
 
+  isFactory(): boolean {
+    // All "factories" in the game have more than one active queue.
+    return !_.isNil(this.activeQueues) ? this.activeQueues !== 1 : false;
+  }
+
+  isShop(): boolean {
+    // All "shops" in the game have only one active queue.
+    return !_.isNil(this.activeQueues) ? this.activeQueues === 1 : false;
+  }
+
 }
