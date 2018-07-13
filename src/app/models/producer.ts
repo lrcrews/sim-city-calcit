@@ -56,4 +56,25 @@ export class Producer {
     return !_.isNil(this.activeQueues) ? this.activeQueues === 1 : false;
   }
 
+  itemTimeInSeconds(itemKey: string, producerLevel: number = 0, speedModifier: number = 1): number | undefined {
+    const timeTable = _.find(this.timeTables, currentTimeTable => currentTimeTable.level === producerLevel);
+    if (!_.isNil(timeTable)) {
+      const timing = _.find(timeTable.timings, currentTiming => currentTiming.itemKey === itemKey);
+      if (!_.isNil(timing)) {
+        if (!_.isNaN(speedModifier) && speedModifier > 0) {
+          return timing.productionTimeInSeconds / speedModifier;
+        } else {
+          console.warn(`[${this.key}] Given speedModifier: ${speedModifier}, is NaN or less than 1.`);
+          return undefined;
+        }
+      } else {
+        console.warn(`[${this.key}] Timing not found for itemKey: ${itemKey}`);
+        return undefined;
+      }
+    } else {
+      console.warn(`[${this.key}] TimeTable not found for producerLevel: ${producerLevel}`);
+      return undefined;
+    }
+  }
+
 }

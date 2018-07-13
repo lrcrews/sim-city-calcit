@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<section id="tables-page-component">
+  <header>
+    <app-navigation [activeTab]="activeTabName()"></app-navigation>
+  </header>
+  <section>
+    <header>
+      <ul>
+        <li *ngFor="let producer of producers">
+          <app-table [producer]="producer"></app-table>
+        </li>
+      </ul>
+    </header>
+    <footer>
+      I'm an add!
+    </footer>
+  </section>
+</section>
+
+<app-footer></app-footer>

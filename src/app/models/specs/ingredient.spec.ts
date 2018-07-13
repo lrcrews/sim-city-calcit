@@ -31,7 +31,7 @@ describe("Ingredient", () => {
     it("should return an Ingredient instance for the given json", () => {
       const ingredient = Ingredient.fromJson({item_key: "SEEDS", required_amount: 2});
       expect(ingredient.itemKey).toEqual("SEEDS");
-      expect(ingredient.requireAmount).toEqual(2);
+      expect(ingredient.requiredAmount).toEqual(2);
     });
 
   });

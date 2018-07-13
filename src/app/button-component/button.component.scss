@@ -1,0 +1,11 @@
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+section.button-component {
+  background-color: $accent-color;
+  border-radius: 3px;
+  color: #ffffff;
+  padding: 8px 12px;
+  text-align: center;
+
+  @include normal-font-style;
+}

@@ -2,10 +2,12 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { NgModule } from "@angular/core";
 
-import { AppComponent } from "./app-component/app.component";
+import { TablesPageComponent } from "./tables-page-component/tables-page.component";
+import { ToolsPageComponent } from "./tools-page-component/tools-page.component";
 
 const routes: Routes = [
-  { path: "", component: AppComponent }
+  { path: "", component: ToolsPageComponent },
+  { path: "tables", component: TablesPageComponent }
 ];
 
 @NgModule({

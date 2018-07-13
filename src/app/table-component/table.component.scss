@@ -1,0 +1,83 @@
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+section.table-component {
+
+  > header {
+    margin-bottom: 12px;
+
+    > ul {
+
+      > li {
+        @include large-font-style;
+
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  > ul {
+    border: 1px solid $background-header-row;
+
+    > li {
+      @include small-font-style;
+
+      border-top: 1px solid $background-header-row;
+      padding: 8px 0;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:nth-child(odd) {
+        background-color: $background-alt-row;
+      }
+
+      &.header-row {
+        @include accent-font;
+
+        background-color: $background-header-row;
+      }
+
+      > ul {
+
+        > li {
+          display: inline-block;
+          vertical-align: middle;
+
+          &.item-count {
+            width: 5%;
+          }
+
+          &.name {
+            width: 15%;
+          }
+
+          &.production-time {
+            width: 15%;
+          }
+
+          &.required-items {
+            width: 15%;
+          }
+
+          &.required-items-cost {
+            width: 12.5%;
+          }
+
+          &.sell-price {
+            width: 12.5%;
+          }
+
+          &.profit {
+            width: 12.5%;
+          }
+
+          &.profit-per-minute {
+            width: 12.5%;
+          }
+        }
+      }
+    }
+  }
+}

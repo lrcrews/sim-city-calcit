@@ -14,6 +14,7 @@ $tiny: 12px;
 
 @mixin huge-font-style {
   @include accent-font;
+  color: $accent-color;
   font-size: $huge;
   font-weight: 400;
   line-height: 32px;
@@ -21,6 +22,7 @@ $tiny: 12px;
 
 @mixin large-font-style {
   @include main-font;
+  color: $font-black;
   font-size: $large;
   font-weight: 400;
   line-height: 24px;
@@ -28,13 +30,15 @@ $tiny: 12px;
 
 @mixin normal-font-style {
   @include main-font;
+  color: $font-black;
   font-size: $normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 24px;
 }
 
 @mixin small-font-style {
   @include main-font;
+  color: $font-black;
   font-size: $small;
   font-weight: 400;
   line-height: 20px;
@@ -42,6 +46,7 @@ $tiny: 12px;
 
 @mixin tiny-font-style {
   @include main-font;
+  color: $font-black;
   font-size: $tiny;
   font-weight: 400;
   line-height: 20px;
@@ -49,6 +54,7 @@ $tiny: 12px;
 
 @mixin title-font-style {
   @include accent-font;
+  color: $font-black;
   font-size: $normal;
   font-weight: 400;
   line-height: 24px;

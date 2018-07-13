@@ -1,16 +1,57 @@
 @import "../../assets/stylesheets/mixins/mixins.scss";
 
-div#header-component {
-  background-color: $background-tile;
-  box-shadow: 0 1px 2px 0 rgba(70, 80, 100, 0.6);
-  height: 20px;
-  width: 100%;
+section#header-component {
+  background: url("../../assets/images/splash/splash_1000w_320h.jpg") no-repeat;
+  height: 320px;
+  position: relative;
 
-  > section {
-    cursor: pointer;
-    float: right;
-    padding: 0 16px;
+  > header {
+    background-color: $background-tile;
+    box-shadow: 0 1px 2px 0 rgba(70, 80, 100, 0.6);
+    height: 20px;
+    width: 100%;
 
-    @include tiny-font-style;
+    > div {
+      @include tiny-font-style;
+
+      cursor: pointer;
+      float: right;
+      padding: 0 16px;
+    }
+  }
+
+  > footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(70, 80, 100, 0.6);
+    left: 40px;
+    padding: 20px;
+    position: absolute;
+    top: 40px;
+    width: 300px;
+
+    > h1 {
+      @include huge-font-style;
+
+      margin: 0;
+      padding: 0 0 12px 0;
+    }
+
+    > ul {
+      padding-bottom: 12px;
+
+      > li {
+        @include small-font-style;
+
+        font-style: oblique;
+      }
+    }
+
+    > h2 {
+      @include normal-font-style;
+
+      margin: 0;
+      padding: 0;
+    }
   }
 }

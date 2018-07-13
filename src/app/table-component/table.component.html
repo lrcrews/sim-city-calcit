@@ -1,0 +1,82 @@
+<section class="table-component">
+  <header>
+    <ul>
+      <li>
+        <img [attr.src]="producer.imagePath" />
+      </li>
+      <li>
+        {{ producer.name }}
+      </li>
+      <li *ngIf="isShop()">
+        star stuff here
+      </li>
+      <li *ngIf="isShop()">
+        token stuff here
+      </li>
+    </ul>
+  </header>
+  <ul>
+    <li class="header-row">
+      <ul>
+        <li class="item-count">
+          <!-- Intentionally empty (number input in item rows) -->
+        </li>
+        <li class="name">
+          Name
+        </li>
+        <li class="production-time">
+          Time
+        </li>
+        <li class="required-items">
+          Required Items
+        </li>
+        <li class="required-items-cost">
+          Required Items Cost
+        </li>
+        <li class="sell-price">
+          Max Sell Price
+        </li>
+        <li class="profit">
+          Profit
+        </li>
+        <li class="profit-per-minute">
+          Profit Per Minute
+        </li>
+      </ul>
+    </li>
+    <li *ngFor="let item of productionItems">
+      <ul>
+        <li class="item-count">
+          1
+        </li>
+        <li class="name">
+          <img [attr.src]="item.imagePath" />
+          {{ item.name }}
+        </li>
+        <li class="production-time">
+          {{ productionTime(item) }}
+        </li>
+        <li class="required-items">
+          <ul>
+            <li *ngFor="let ingredient of item.ingredients">
+              <img [attr.src]="itemImageForKey(ingredient.itemKey)" />
+              x {{ ingredient.requiredAmount }}
+            </li>
+          </ul>
+        </li>
+        <li class="required-items-cost">
+          {{ requiredItemsCost(item) }}
+        </li>
+        <li class="sell-price">
+          {{ totalSellPrice(item) }}
+        </li>
+        <li class="profit">
+          {{ totalProfit(item) }}
+        </li>
+        <li class="profit-per-minute">
+          {{ profitPerMinute(item) }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>

@@ -32,7 +32,7 @@ export class Ingredient {
     // Unique identifier of the Item corresponding to the "productionTime" value
     public itemKey: string,
     // The number of Items required
-    public requireAmount: number
+    public requiredAmount: number
   ) {}
 
 }

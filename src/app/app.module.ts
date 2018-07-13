@@ -7,6 +7,10 @@ import { CalcitRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app-component/app.component";
 import { FooterComponent } from "./footer-component/footer.component";
 import { HeaderComponent } from "./header-component/header.component";
+import { NavigationComponent } from "./navigation-component/navigation.component";
+import { TableComponent } from "./table-component/table.component";
+import { TablesPageComponent } from "./tables-page-component/tables-page.component";
+import { ToolsPageComponent } from "./tools-page-component/tools-page.component";
 
 import { ConfigurationService } from "./services/configuration.service";
 import { ScBuilditApiService } from "./services/sc-buildit-api.service";
@@ -18,7 +22,11 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavigationComponent,
+    TableComponent,
+    TablesPageComponent,
+    ToolsPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
   ],
   providers: [
     ConfigurationService,
-    ScBuilditApiService
+    ScBuilditApiService,
   ],
 })
 export class AppModule { }
