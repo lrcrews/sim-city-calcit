@@ -3,15 +3,55 @@
     <ul>
       <li>
         <img [attr.src]="producer.imagePath" />
+        <div>
+          {{ producer.name }}
+        </div>
+        <div *ngIf="producer.isShop()">
+          <i tabindex="1" 
+             class="fas fa-star empty" 
+             *ngIf="levelLessThan(1)"
+             (click)="setLevel(1)"
+             (keyup.enter)="setLevel(1)"></i>
+          <i tabindex="1"
+             class="fas fa-star filled" 
+             *ngIf="levelGreaterThanOrEqualTo(1)"
+             (click)="setLevel(1)"
+             (keyup.enter)="setLevel(1)"></i>
+          <i tabindex="1" 
+             class="fas fa-star empty" 
+             *ngIf="levelLessThan(2)"
+             (click)="setLevel(2)"
+             (keyup.enter)="setLevel(2)"></i>
+          <i tabindex="1" 
+             class="fas fa-star filled" 
+             *ngIf="levelGreaterThanOrEqualTo(2)"
+             (click)="setLevel(2)"
+             (keyup.enter)="setLevel(2)"></i>
+          <i tabindex="1" 
+             class="fas fa-star empty" 
+             *ngIf="levelLessThan(3)"
+             (click)="setLevel(3)"
+             (keyup.enter)="setLevel(3)"></i>
+          <i tabindex="1" 
+             class="fas fa-star filled" 
+             *ngIf="levelGreaterThanOrEqualTo(3)"
+             (click)="setLevel(3)"
+             (keyup.enter)="setLevel(3)"></i>
+          <span class="link"
+                *ngIf="levelGreaterThanOrEqualTo(1)"
+                (click)="setLevel(0)"
+                (keyup.enter)="setLevel(0)">
+            clear
+          </span>
+        </div>
       </li>
       <li>
-        {{ producer.name }}
-      </li>
-      <li *ngIf="isShop()">
-        star stuff here
-      </li>
-      <li *ngIf="isShop()">
-        token stuff here
+        <div *ngIf="producer.isShop()">
+          token stuff here
+        </div>
+        <div *ngIf="producer.isFactory()">
+          {{ producer.activeQueues }} Production Slots
+        </div>
       </li>
     </ul>
   </header>

@@ -12,6 +12,51 @@ section.table-component {
 
         display: inline-block;
         vertical-align: middle;
+
+        &:first-child {
+          width: 70%;
+        }
+
+        &:last-child {
+          text-align: right;
+          width: 30%;
+        }
+
+        > img,
+        > div {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        > img {
+          height: 60px;
+          width: 81px;
+        }
+
+        > div {
+          padding-left: 8px;
+
+          > i {
+            cursor: pointer;
+
+            &.empty {
+              color: $star-empty;
+
+              &:hover {
+                color: $star-hover;
+              }
+            }
+
+            &.filled {
+              color: $star-filled;
+            }
+          }
+
+          > span {
+            @include tiny-font-style;
+            color: $font-link;
+          }
+        }
       }
     }
   }

@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 import { ConfigurationService } from "../services/configuration.service";
 import { Ingredient } from "../models/ingredient";
@@ -13,7 +13,7 @@ import * as _ from "lodash";
   templateUrl: "./table.component.html"
 })
 
-export class TableComponent implements OnChanges, OnInit {
+export class TableComponent implements OnInit {
 
   @Input() producer: Producer;
 
@@ -24,28 +24,27 @@ export class TableComponent implements OnChanges, OnInit {
 
   selectedLevel = 0;
 
-  private _dataLoaded = false;
-
   constructor(private _configurationService: ConfigurationService) { }
 
   ngOnInit() {
     this._watchForItems();
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    // first change is undefined since data load isn't complete
-    if (!changes.producer.isFirstChange()) {
-      this._dataLoaded = true;
-    }
-  }
-
-  isShop(): boolean {
-    return this._dataLoaded && this.producer.isShop();
-  }
-
   itemImageForKey(itemKey: string): string {
     const item = _.find(this.allItems, currentItem => currentItem.key === itemKey);
     return item.imagePath;
+  }
+
+  levelLessThan(value: number): boolean {
+    return this.selectedLevel < value;
+  }
+
+  levelGreaterThanOrEqualTo(value: number): boolean {
+    return this.selectedLevel >= value;
+  }
+
+  setLevel(value: number): void {
+    this.selectedLevel = value;
   }
 
   productionTime(item: Item): string {
@@ -67,7 +66,7 @@ export class TableComponent implements OnChanges, OnInit {
     // Seconds
     const productionSeconds = productionTimeInMinutes - Math.floor(productionTimeInMinutes);
     if (productionSeconds > 0) {
-      productionTimeString += ` ${productionSeconds}s`;
+      productionTimeString += ` ${productionSeconds * 60}s`;
     }
     return productionTimeString;
   }

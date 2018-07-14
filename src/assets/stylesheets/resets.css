@@ -27,6 +27,7 @@ ul {
 a,
 .link {
   color: #51b1f1;
+  cursor: pointer;
   text-decoration: none;
 }
 

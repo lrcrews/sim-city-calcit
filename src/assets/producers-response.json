@@ -2,7 +2,7 @@
   "producers":[
     {
       "active_queues":2,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Factory_Small.png",
       "key":"SMALL_FACTORY",
       "name":"Small Factory",
       "time_tables":[
@@ -59,7 +59,7 @@
     },
     {
       "active_queues":3,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Factory_Basic.png",
       "key":"BASIC_FACTORY",
       "name":"Basic Factory",
       "time_tables":[
@@ -116,7 +116,7 @@
     },
     {
       "active_queues":4,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Factory_MassProduction.png",
       "key":"MASS_PRODUCTION_FACTORY",
       "name":"Mass Production Factory",
       "time_tables":[
@@ -173,7 +173,7 @@
     },
     {
       "active_queues":5,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Factory_HighTech.png",
       "key":"HIGH_TECH_FACTORY",
       "name":"Hight-tech Factory",
       "time_tables":[
@@ -230,7 +230,7 @@
     },
     {
       "active_queues":5,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Factory_NanoTech.png",
       "key":"NANO_TECH_FACTORY",
       "name":"Nano-tech Factory",
       "time_tables":[
@@ -287,7 +287,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_BuildingSupplies.png",
       "key":"BUILDING_SUPPLIES_STORE",
       "name":"Building Supplies Store",
       "time_tables":[
@@ -411,7 +411,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_Hardware.png",
       "key":"HARDWARE_STORE",
       "name":"Hardware Store",
       "time_tables":[
@@ -535,7 +535,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_FarmersMarket.png",
       "key":"FARMERS_MARKET",
       "name":"Farmer's Market",
       "time_tables":[
@@ -675,7 +675,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_Furniture.png",
       "key":"FURNITURE_STORE",
       "name":"Furniture Store",
       "time_tables":[
@@ -783,7 +783,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_GardeningSupplies.png",
       "key":"GARDENING_SUPPLIES",
       "name":"Gardening Supplies",
       "time_tables":[
@@ -907,7 +907,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_DonutShop.png",
       "key":"DONUT_SHOP",
       "name":"Donut Shop",
       "time_tables":[
@@ -1031,7 +1031,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_Fashion.png",
       "key":"FASHION_STORE",
       "name":"Fashion Store",
       "time_tables":[
@@ -1139,7 +1139,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_FastFoodRestaurant.png",
       "key":"FAST_FOOD_RESTAURANT",
       "name":"Fast Food Restaurant",
       "time_tables":[
@@ -1263,7 +1263,7 @@
     },
     {
       "active_queues":1,
-      "image_path":"",
+      "image_path":"../../assets/images/buildings/Store_Appliances.png",
       "key":"HOME_APPLIANCES",
       "name":"Home Appliances",
       "time_tables":[
