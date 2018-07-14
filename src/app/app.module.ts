@@ -1,4 +1,3 @@
-import { Location, LocationStrategy, PathLocationStrategy } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
@@ -42,9 +41,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
   ],
   providers: [
     ConfigurationService,
-    Location,
     ScBuilditApiService,
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
   ],
 })
 export class AppModule { }
