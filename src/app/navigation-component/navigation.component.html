@@ -1,16 +1,16 @@
 <section id="navigation-component">
   <ul>
+      <li tabindex="0"
+          [ngClass]="{ active: tablesTabActive() }" 
+          (click)="navigateToTablesPage()"
+          (keyup.enter)="navigateToTablesPage()">
+      TABLES
+    </li>
     <li tabindex="0" 
         [ngClass]="{ active: toolsTabActive() }" 
         (click)="navigateToToolsPage()"
         (keyup.enter)="navigateToToolsPage()">
       TOOLS
-    </li>
-    <li tabindex="0"
-        [ngClass]="{ active: tablesTabActive() }" 
-        (click)="navigateToTablesPage()"
-        (keyup.enter)="navigateToTablesPage()">
-      TABLES
     </li>
   </ul>
 </section>

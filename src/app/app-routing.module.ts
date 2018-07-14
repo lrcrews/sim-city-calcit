@@ -6,8 +6,9 @@ import { TablesPageComponent } from "./tables-page-component/tables-page.compone
 import { ToolsPageComponent } from "./tools-page-component/tools-page.component";
 
 const routes: Routes = [
-  { path: "", component: ToolsPageComponent },
-  { path: "tables", component: TablesPageComponent }
+  { path: "", component: TablesPageComponent },
+  { path: "tables", component: TablesPageComponent },
+  { path: "tools", component: ToolsPageComponent }
 ];
 
 @NgModule({

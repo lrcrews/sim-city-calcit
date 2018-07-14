@@ -32,7 +32,7 @@ export class NavigationComponent {
 
   navigateToToolsPage(): void {
     if (!this.toolsTabActive()) {
-      this._router.navigateByUrl("/");
+      this._router.navigateByUrl("/tools");
     }
   }
 
