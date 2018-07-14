@@ -1,0 +1,27 @@
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+section.text-input-component {
+  @include normal-font-style;
+
+  padding: 0 4px;
+  width: calc(100% - 8px);
+
+  > input {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid $border-black;
+    padding: 2px;
+    text-align: center;
+    width: calc(100% - 4px);
+
+    &:focus {
+      border-bottom: 1px solid $accent-color;
+      box-shadow: none;
+      outline: none;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+}

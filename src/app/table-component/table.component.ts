@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from "@angular/core";
 
 import { ConfigurationService } from "../services/configuration.service";
+import { Ingredient } from "../models/ingredient";
 import { Item } from "../models/item";
 import { Producer } from "../models/producer";
 
@@ -76,11 +77,19 @@ export class TableComponent implements OnChanges, OnInit {
       const ingredientItem = _.find(this.allItems, currentItem => currentItem.key === ingredient.itemKey);
       return sum + ingredientItem.maxPrice * ingredient.requiredAmount;
     }, 0);
-    return perUnitCost * this._itemCountModifier(item);
+    return perUnitCost * this.itemCountsHash[item.key];
+  }
+
+  requiredAmount(item: Item, ingredient: Ingredient): number {
+    return ingredient.requiredAmount * this.itemCountsHash[item.key];
+  }
+
+  noIngredients(item): boolean {
+    return _.isEmpty(item.ingredients);
   }
 
   totalSellPrice(item: Item): number {
-    return item.maxPrice * this._itemCountModifier(item);
+    return item.maxPrice * this.itemCountsHash[item.key];
   }
 
   totalProfit(item: Item): number {
@@ -88,23 +97,26 @@ export class TableComponent implements OnChanges, OnInit {
   }
 
   profitPerMinute(item: Item): number {
-    return Math.round((this.totalProfit(item) / this._productionTimeInMinutes(item)) * 100) / 100;
-  }
-
-  private _itemCountModifier(item: Item): number {
-    return !_.isNil(this.itemCountsHash[item.key]) ? this.itemCountsHash[item.key] : 1;
+    const profitPerMinute = Math.round((this.totalProfit(item) / this._productionTimeInMinutes(item)) * 100) / 100;
+    return !_.isNaN(profitPerMinute) ? profitPerMinute : 0;
   }
 
   private _productionTimeInMinutes(item: Item): number {
     const timeTable = _.find(this.producer.timeTables, table => table.level === this.selectedLevel);
     const timing = _.find(timeTable.timings, currentTiming => currentTiming.itemKey === item.key);
-    return timing.productionTimeInSeconds / 60;
+    if (this.producer.activeQueues === 1) {
+      return (timing.productionTimeInSeconds / 60) * this.itemCountsHash[item.key];
+    } else {
+      const groupedItemsCount = Math.ceil(this.itemCountsHash[item.key] / this.producer.activeQueues);
+      return (timing.productionTimeInSeconds / 60) * groupedItemsCount;
+    }
   }
 
   private _watchForItems(): void {
     this._configurationService.items.subscribe( items => {
       this.allItems = items;
       this.productionItems = _.filter(items, item => {
+        this.itemCountsHash[ item.key ] = 1;
         return _.find(this.producer.timeTables[0].timings, timing => timing.itemKey === item.key) !== undefined;
       });
     });

@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -11,6 +12,7 @@ import { HeaderComponent } from "./header-component/header.component";
 import { NavigationComponent } from "./navigation-component/navigation.component";
 import { TableComponent } from "./table-component/table.component";
 import { TablesPageComponent } from "./tables-page-component/tables-page.component";
+import { TextInputComponent } from "./text-input-component/text-input.component";
 import { ToolsPageComponent } from "./tools-page-component/tools-page.component";
 
 import { ConfigurationService } from "./services/configuration.service";
@@ -28,11 +30,13 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     NavigationComponent,
     TableComponent,
     TablesPageComponent,
+    TextInputComponent,
     ToolsPageComponent,
   ],
   imports: [
     BrowserModule,
     CalcitRoutingModule,
+    FormsModule,
     HttpModule,
   ],
   providers: [

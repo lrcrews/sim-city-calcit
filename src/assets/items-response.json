@@ -1,84 +1,84 @@
 {
   "items":[
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/metal.png",
       "ingredients":[],
       "key": "METAL",
       "max_price":10,
       "name":"Metal"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/wood.png",
       "ingredients":[],
       "key": "WOOD",
       "max_price":20,
       "name":"Wood"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/plastic.png",
       "ingredients":[],
       "key": "PLASTIC",
       "max_price":25,
       "name":"Plastic"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/seeds.png",
       "ingredients":[],
       "key": "SEEDS",
       "max_price":30,
       "name":"Seeds"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/minerals.png",
       "ingredients":[],
       "key": "MINERALS",
       "max_price":40,
       "name":"Minerals"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/chemicals.png",
       "ingredients":[],
       "key": "CHEMICALS",
       "max_price":60,
       "name":"Chemicals"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/textiles.png",
       "ingredients":[],
       "key": "TEXTILES",
       "max_price":90,
       "name":"Textiles"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/sugarspices.png",
       "ingredients":[],
       "key": "SUGAR_AND_SPICES",
       "max_price":110,
       "name":"Sugar and Spices"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/glass.png",
       "ingredients":[],
       "key": "GLASS",
       "max_price":120,
       "name":"Glass"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/animalfeed.png",
       "ingredients":[],
       "key": "ANIMAL_FEED",
       "max_price":140,
       "name":"Animal Feed"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/electricalcomponents.png",
       "ingredients":[],
       "key": "ELECTRICAL_COMPONENTS",
       "max_price":160,
       "name":"Electrical Components"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/nails.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -90,7 +90,7 @@
       "name":"Nails"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/planks.png",
       "ingredients":[
         {
           "item_key":"WOOD",
@@ -102,7 +102,7 @@
       "name":"Planks"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/bricks.png",
       "ingredients":[
         {
           "item_key":"MINERALS",
@@ -114,7 +114,7 @@
       "name":"Bricks"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cement.png",
       "ingredients":[
         {
           "item_key":"MINERALS",
@@ -130,7 +130,7 @@
       "name":"Cement"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/glue.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -146,7 +146,7 @@
       "name":"Glue"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/paintbucket.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -166,7 +166,7 @@
       "name":"Paint"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/hammer.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -182,7 +182,7 @@
       "name":"Hammer"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/measuringtape.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -198,7 +198,7 @@
       "name":"Measuring Tape"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/shovel.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -218,7 +218,7 @@
       "name":"Shovel"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cookingutensils.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -238,7 +238,7 @@
       "name":"Cooking Utensils"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/ladder.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -254,7 +254,7 @@
       "name":"Ladder"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/drill.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -274,7 +274,7 @@
       "name":"Drill"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/vegetables.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -286,7 +286,7 @@
       "name":"Vegetables"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/flourbags.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -302,7 +302,7 @@
       "name":"Flour Bag"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/fruitberries.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -318,7 +318,7 @@
       "name":"Fruit and Berries"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cream.png",
       "ingredients":[
         {
           "item_key":"ANIMAL_FEED",
@@ -330,7 +330,7 @@
       "name":"Cream"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/corn.png",
       "ingredients":[
         {
           "item_key":"MINERALS",
@@ -346,7 +346,7 @@
       "name":"Corn"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cheese.png",
       "ingredients":[
         {
           "item_key":"ANIMAL_FEED",
@@ -358,7 +358,7 @@
       "name":"Cheese"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/beef.png",
       "ingredients":[
         {
           "item_key":"ANIMAL_FEED",
@@ -370,7 +370,7 @@
       "name":"Beef"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/chairs.png",
       "ingredients":[
         {
           "item_key":"WOOD",
@@ -390,7 +390,7 @@
       "name":"Chairs"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/tables.png",
       "ingredients":[
         {
           "item_key":"NAILS",
@@ -410,7 +410,7 @@
       "name":"Tables"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/hometextiles.png",
       "ingredients":[
         {
           "item_key":"TEXTILES",
@@ -426,7 +426,7 @@
       "name":"Home Textiles"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cupboard.png",
       "ingredients":[
         {
           "item_key":"GLASS",
@@ -446,7 +446,7 @@
       "name":"Cupboard"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/couch.png",
       "ingredients":[
         {
           "item_key":"TEXTILES",
@@ -466,7 +466,7 @@
       "name":"Couch"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/grass.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -482,7 +482,7 @@
       "name":"Grass"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/treesaplings.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -498,7 +498,7 @@
       "name":"Tree Saplings"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/gardenfurniture.png",
       "ingredients":[
         {
           "item_key":"CHEMICALS",
@@ -518,7 +518,7 @@
       "name":"Garden Furniture"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/firepit.png",
       "ingredients":[
         {
           "item_key":"BRICKS",
@@ -538,7 +538,7 @@
       "name":"Fire Pit"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/lawnmower.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -558,7 +558,7 @@
       "name":"Lawn Mower"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/gardengnomes.png",
       "ingredients":[
         {
           "item_key":"CEMENT",
@@ -574,7 +574,7 @@
       "name":"Garden Gnomes"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/donuts.png",
       "ingredients":[
         {
           "item_key":"SUGAR_AND_SPICES",
@@ -590,7 +590,7 @@
       "name":"Donuts"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/greensmoothie.png",
       "ingredients":[
         {
           "item_key":"VEGETABLES",
@@ -606,7 +606,7 @@
       "name":"Green Smoothie"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/breadroll.png",
       "ingredients":[
         {
           "item_key":"FLOUR_BAG",
@@ -622,7 +622,7 @@
       "name":"Bread Roll"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cherrycheesecake.png",
       "ingredients":[
         {
           "item_key":"FLOUR_BAG",
@@ -642,7 +642,7 @@
       "name":"Cherry Cheesecake"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cream.png",
       "ingredients":[
         {
           "item_key":"SUGAR_AND_SPICES",
@@ -662,7 +662,7 @@
       "name":"Frozen Yogurt"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/coffee.png",
       "ingredients":[
         {
           "item_key":"SEEDS",
@@ -682,7 +682,7 @@
       "name":"Coffee"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cap.png",
       "ingredients":[
         {
           "item_key":"TEXTILES",
@@ -698,7 +698,7 @@
       "name":"Cap"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/shoes.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -718,7 +718,7 @@
       "name":"Shoes"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/sunglasses.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -738,7 +738,7 @@
       "name":"Watch"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/businesssuits.png",
       "ingredients":[
         {
           "item_key":"TEXTILES",
@@ -758,7 +758,7 @@
       "name":"Business Suits"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/backpack.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -778,7 +778,7 @@
       "name":"Backpack"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/icecreamsandwich.png",
       "ingredients":[
         {
           "item_key":"CREAM",
@@ -794,7 +794,7 @@
       "name":"Ice Cream Sandwich"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/pizza.png",
       "ingredients":[
         {
           "item_key":"FLOUR_BAG",
@@ -814,7 +814,7 @@
       "name":"Pizza"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/burgers.png",
       "ingredients":[
         {
           "item_key":"BREAD_ROLL",
@@ -834,7 +834,7 @@
       "name":"Burgers"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/cheesefries.png",
       "ingredients":[
         {
           "item_key":"VEGETABLES",
@@ -850,7 +850,7 @@
       "name":"Cheese Fries"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/lemonadebottles.png",
       "ingredients":[
         {
           "item_key":"SUGAR_AND_SPICES",
@@ -870,7 +870,7 @@
       "name":"Lemonade Bottle"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/popcorn.png",
       "ingredients":[
         {
           "item_key":"CORN",
@@ -886,7 +886,7 @@
       "name":"Popcorn"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/bbqgrill.png",
       "ingredients":[
         {
           "item_key":"METAL",
@@ -902,7 +902,7 @@
       "name":"BBQ Grill"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/refrigerator.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -922,7 +922,7 @@
       "name":"Refrigerator"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/lightingsystem.png",
       "ingredients":[
         {
           "item_key":"CHEMICALS",
@@ -942,7 +942,7 @@
       "name":"Lighting System"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/tv.png",
       "ingredients":[
         {
           "item_key":"PLASTIC",
@@ -962,7 +962,7 @@
       "name":"TV"
     },
     {
-      "image_path":"",
+      "image_path":"../../assets/images/items/microwaveoven.png",
       "ingredients":[
         {
           "item_key":"METAL",

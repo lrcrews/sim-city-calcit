@@ -28,13 +28,10 @@
           Time
         </li>
         <li class="required-items">
-          Required Items
-        </li>
-        <li class="required-items-cost">
-          Required Items Cost
+          Items (Cost)
         </li>
         <li class="sell-price">
-          Max Sell Price
+          Max<br/>Price
         </li>
         <li class="profit">
           Profit
@@ -47,11 +44,13 @@
     <li *ngFor="let item of productionItems">
       <ul>
         <li class="item-count">
-          1
+          <app-text-input [(model)]="itemCountsHash[item.key]"></app-text-input>
         </li>
         <li class="name">
           <img [attr.src]="item.imagePath" />
-          {{ item.name }}
+          <div>
+            {{ item.name }}
+          </div>
         </li>
         <li class="production-time">
           {{ productionTime(item) }}
@@ -60,21 +59,37 @@
           <ul>
             <li *ngFor="let ingredient of item.ingredients">
               <img [attr.src]="itemImageForKey(ingredient.itemKey)" />
-              x {{ ingredient.requiredAmount }}
+              <div>
+                x {{ requiredAmount(item, ingredient) }}
+              </div>
+            </li>
+            <li *ngIf="noIngredients(item)">
+              <div>
+                --
+              </div>
             </li>
           </ul>
-        </li>
-        <li class="required-items-cost">
-          {{ requiredItemsCost(item) }}
+          <div>
+            ({{ requiredItemsCost(item) }}<img src="../../assets/images/misc/currency_coins.png" />)
+          </div>
         </li>
         <li class="sell-price">
-          {{ totalSellPrice(item) }}
+          <div>
+            {{ totalSellPrice(item) }}
+            <img src="../../assets/images/misc/currency_coins.png" />
+          </div>
         </li>
         <li class="profit">
-          {{ totalProfit(item) }}
+          <div>
+            {{ totalProfit(item) }}
+            <img src="../../assets/images/misc/currency_coins.png" />
+          </div>
         </li>
         <li class="profit-per-minute">
-          {{ profitPerMinute(item) }}
+          <div>
+            {{ profitPerMinute(item) }}
+            <img src="../../assets/images/misc/currency_coins.png" />
+          </div>
         </li>
       </ul>
     </li>

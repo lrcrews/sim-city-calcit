@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+
 import { ConfigurationService } from "../services/configuration.service";
 import { TableComponent } from "./table.component";
 
@@ -14,6 +16,9 @@ describe("TableComponent", () => {
       ],
       providers: [
         ConfigurationService
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
       ],
     }).compileComponents();
   }));

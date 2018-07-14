@@ -6,6 +6,9 @@
   </header>
   <section>
     <header>
+      <div>
+        Below you'll find tables for every Industrial Building and every Commercial Building, with a break down of the Items those building can make. You can change the number of items at the start of each row to see how long it takes to make how every many <em>you</em> want to make (and how that impacts total cost, profit, and time)!
+      </div>
       <ul>
         <li *ngFor="let producer of producers">
           <app-table [producer]="producer"></app-table>
