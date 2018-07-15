@@ -16,6 +16,16 @@ body {
   width: 100%;
 }
 
+body {
+  background:
+    radial-gradient(#dedede 15%, transparent 15%) 0 0,
+    radial-gradient(#eeeff0 15%, transparent 15%) 16px 16px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 16px 17px;
+  background-size: 32px 32px;
+  background-color: #f8f8f8;
+}
+
 ol,
 ul {
   clear: both;

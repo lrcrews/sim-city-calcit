@@ -1,21 +1,7 @@
 @import "../../assets/stylesheets/mixins/mixins.scss";
 
 div {
-  // based on: https://codepen.io/jank/pen/WrpVBR
-  background:
-    radial-gradient(#dedede 15%, transparent 15%) 0 0,
-    radial-gradient(#eeeff0 15%, transparent 15%) 16px 16px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 16px 17px;
-  background-size: 32px 32px;
-  background-color: $background-page;
   height: 100%;
-  width: 100%;
-
-  > section {
-    height: 100%;
-    margin: 0 auto;
-    max-width: 1000px;
-    overflow-y: scroll;
-  }
+  margin: 0 auto;
+  max-width: 1000px;
 }
