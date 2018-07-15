@@ -22,6 +22,7 @@ export class TableComponent implements OnInit {
 
   itemCountsHash = {};
 
+  selectedBoostMultiplier = 1;
   selectedLevel = 0;
 
   constructor(private _configurationService: ConfigurationService) { }
@@ -47,6 +48,18 @@ export class TableComponent implements OnInit {
     this.selectedLevel = value;
   }
 
+  boostMultiplierActive(value: number): boolean {
+    return this.selectedBoostMultiplier === value;
+  }
+
+  updateBoostMultiplier(value: number): void {
+    if (this.boostMultiplierActive(value)) {
+      this.selectedBoostMultiplier = 1;
+    } else {
+      this.selectedBoostMultiplier = value;
+    }
+  }
+
   productionTime(item: Item): string {
     let productionTimeString = "";
     let productionTimeInMinutes = this._productionTimeInMinutes(item);
@@ -60,13 +73,13 @@ export class TableComponent implements OnInit {
       }
     }
     // Minutes
-    if (productionTimeInMinutes > 0) {
+    if (Math.floor(productionTimeInMinutes) > 0) {
       productionTimeString += `${Math.floor(productionTimeInMinutes)}m`;
     }
     // Seconds
     const productionSeconds = productionTimeInMinutes - Math.floor(productionTimeInMinutes);
     if (productionSeconds > 0) {
-      productionTimeString += ` ${productionSeconds * 60}s`;
+      productionTimeString += ` ${Math.floor(productionSeconds * 60)}s`;
     }
     return productionTimeString;
   }
@@ -103,9 +116,9 @@ export class TableComponent implements OnInit {
   private _productionTimeInMinutes(item: Item): number {
     const timeTable = _.find(this.producer.timeTables, table => table.level === this.selectedLevel);
     const timing = _.find(timeTable.timings, currentTiming => currentTiming.itemKey === item.key);
-    if (this.producer.activeQueues === 1) {
-      return (timing.productionTimeInSeconds / 60) * this.itemCountsHash[item.key];
-    } else {
+    if (this.producer.isShop()) {
+      return ((timing.productionTimeInSeconds / 60) / this.selectedBoostMultiplier) * this.itemCountsHash[item.key];
+    } else { // It's a Factory
       const groupedItemsCount = Math.ceil(this.itemCountsHash[item.key] / this.producer.activeQueues);
       return (timing.productionTimeInSeconds / 60) * groupedItemsCount;
     }

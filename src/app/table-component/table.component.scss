@@ -56,6 +56,41 @@ section.table-component {
             @include tiny-font-style;
             color: $font-link;
           }
+
+          > div {
+            cursor: pointer;
+            display: inline-block;
+            height: 40px;
+            margin-left: 12px;
+            position: relative;
+            width: 33px;
+
+            &.inactive {
+
+              > div {
+                display: block;
+
+                &:hover {
+                  background-color: rgba(42, 42, 42, 0.2);
+                }
+              }
+            }
+
+            > div {
+              background-color: rgba(42, 42, 42, 0.4);
+              border-radius: 20px;
+              display: none;
+              height: 100%;
+              position: absolute;
+              width: 100%;
+              z-index: 10;
+            }
+
+            > img {
+              height: 100%;
+              width: 100%;
+            }
+          }
         }
       }
     }
