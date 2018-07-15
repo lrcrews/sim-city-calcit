@@ -24,7 +24,7 @@ section#tables-page-component {
 
     > header {
       height: 100%;
-      width: 66%;
+      width: calc(100% - 156px);
 
       > h2 {
         @include huge-font-style;
@@ -46,9 +46,22 @@ section#tables-page-component {
     }
 
     > footer {
-      background-color: $background-ad;
+      background-color: #ffffff;
       height: 100%;
-      width: 34%;
+      padding: 40px 20px;
+      width: 116px;
+
+      > div {
+        background-color: $background-ad;
+        color: #426282;
+        height: 430px;
+        text-align: center;
+        width: 116px;
+
+        > div {
+          padding-top: 160px;
+        }
+      }
     }
   }
 }
