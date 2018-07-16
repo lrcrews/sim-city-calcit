@@ -1,6 +1,4 @@
-import * as process from "process";
-
 export const environment = {
-  google_analytics_id: process.env.GOOGLE_ANALYTICS_ID,
+  google_analytics_id: "UA-122487488-1",
   production: true
 };
