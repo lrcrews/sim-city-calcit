@@ -6,6 +6,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { CalcitRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app-component/app.component";
+import { BoostSelectComponent } from "./boost-select-component/boost-select.component";
 import { ButtonComponent } from "./button-component/button.component";
 import { FooterComponent } from "./footer-component/footer.component";
 import { HeaderComponent } from "./header-component/header.component";
@@ -25,6 +26,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
   ],
   declarations: [
     AppComponent,
+    BoostSelectComponent,
     ButtonComponent,
     FooterComponent,
     HeaderComponent,
