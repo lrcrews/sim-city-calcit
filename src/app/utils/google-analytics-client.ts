@@ -10,6 +10,8 @@ export class GoogleAnalyticsClient {
     const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
     if (!_.isEmpty(googleAnalyticsId)) {
       gtag("config", googleAnalyticsId, { page_path: path });
+    } else {
+      console.log("unable to load Google Analytics ID.");
     }
   }
 }
