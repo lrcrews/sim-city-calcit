@@ -1,4 +1,5 @@
 import * as _ from "lodash";
+import * as process from "process";
 
 // Declare gtag function as ambient
 declare var gtag: Function; // tslint:disable-line
