@@ -36,14 +36,6 @@ export class TableComponent implements OnInit {
     return item.imagePath;
   }
 
-  levelLessThan(value: number): boolean {
-    return this.selectedLevel < value;
-  }
-
-  levelGreaterThanOrEqualTo(value: number): boolean {
-    return this.selectedLevel >= value;
-  }
-
   setLevel(value: number): void {
     this.selectedLevel = value;
   }

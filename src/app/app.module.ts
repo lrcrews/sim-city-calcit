@@ -10,6 +10,7 @@ import { ButtonComponent } from "./button-component/button.component";
 import { FooterComponent } from "./footer-component/footer.component";
 import { HeaderComponent } from "./header-component/header.component";
 import { NavigationComponent } from "./navigation-component/navigation.component";
+import { ProducerLevelSelectComponent } from "./producer-level-select-component/producer-level-select.component";
 import { TableComponent } from "./table-component/table.component";
 import { TablesPageComponent } from "./tables-page-component/tables-page.component";
 import { TextInputComponent } from "./text-input-component/text-input.component";
@@ -28,6 +29,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
+    ProducerLevelSelectComponent,
     TableComponent,
     TablesPageComponent,
     TextInputComponent,
