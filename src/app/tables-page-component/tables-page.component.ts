@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { ConfigurationService } from "../services/configuration.service";
+import { GoogleAnalyticsClient } from "../utils/google-analytics-client";
 import { NavigationComponent } from "../navigation-component/navigation.component";
 import { Producer } from "../models/producer";
 
@@ -15,6 +16,7 @@ export class TablesPageComponent implements OnInit {
   constructor(private _configurationService: ConfigurationService) { }
 
   ngOnInit() {
+    GoogleAnalyticsClient.setPage("/tables");
     this._watchForProducers();
   }
 
