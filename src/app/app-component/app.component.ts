@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this._loadItems();
     this._loadProducers();
-    // TODO: load user cookies (for user's buildings)
+    // TODO: load user's buildings
   }
 
   private _loadItems(): void {
