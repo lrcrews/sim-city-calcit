@@ -59,10 +59,22 @@ section.table-component {
 
           &.item-count {
             width: 6%;
+
+            @media (max-width: $smaller-view) {
+              width: 8%;
+            }
           }
 
           &.name {
             width: 27%;
+
+            @media (max-width: $smaller-view) {
+              width: 5%;
+
+              > div {
+                display: none;
+              }
+            }
 
             > img {
               height: 20px;
@@ -72,22 +84,46 @@ section.table-component {
 
           &.production-time {
             width: 14%;
+
+            @media (max-width: $smaller-view) {
+              width: 18%;
+            }
           }
 
           &.required-items {
             width: 20%;
+
+            @media (max-width: $smaller-view) {
+              width: 26%;
+
+              > div {
+                display: block;
+              }
+            }
           }
 
           &.sell-price {
             width: 11%;
+
+            @media (max-width: $smaller-view) {
+              width: 14%;
+            }
           }
 
           &.profit {
             width: 11%;
+
+            @media (max-width: $smaller-view) {
+              width: 14%;
+            }
           }
 
           &.profit-per-minute {
             width: 11%;
+
+            @media (max-width: $smaller-view) {
+              width: 15%;
+            }
           }
 
           > img,
