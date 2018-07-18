@@ -40,8 +40,8 @@
   </div>
   <section>
     {{ producer.name }}
-    <span *ngIf="producer.isFactory()">
+    <div *ngIf="producer.isFactory()">
         ({{ producer.activeQueues }} Production Slots)
-    </span>
+    </div>
   </section>
 </section>

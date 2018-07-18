@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: "app-text-input",
-  styleUrls: [ "./text-input.component.scss" ],
-  templateUrl: "./text-input.component.html"
+  selector: "app-number-input",
+  styleUrls: [ "./number-input.component.scss" ],
+  templateUrl: "./number-input.component.html"
 })
 
-export class TextInputComponent {
+export class NumberInputComponent {
 
   modelValue: string;
 

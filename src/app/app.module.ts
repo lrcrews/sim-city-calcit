@@ -11,10 +11,10 @@ import { ButtonComponent } from "./button-component/button.component";
 import { FooterComponent } from "./footer-component/footer.component";
 import { HeaderComponent } from "./header-component/header.component";
 import { NavigationComponent } from "./navigation-component/navigation.component";
+import { NumberInputComponent } from "./number-input-component/number-input.component";
 import { ProducerLevelSelectComponent } from "./producer-level-select-component/producer-level-select.component";
 import { TableComponent } from "./table-component/table.component";
 import { TablesPageComponent } from "./tables-page-component/tables-page.component";
-import { TextInputComponent } from "./text-input-component/text-input.component";
 import { ToolsPageComponent } from "./tools-page-component/tools-page.component";
 
 import { ConfigurationService } from "./services/configuration.service";
@@ -31,10 +31,10 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
+    NumberInputComponent,
     ProducerLevelSelectComponent,
     TableComponent,
     TablesPageComponent,
-    TextInputComponent,
     ToolsPageComponent,
   ],
   imports: [

@@ -47,7 +47,7 @@
     <li *ngFor="let item of productionItems">
       <ul>
         <li class="item-count">
-          <app-text-input [(model)]="itemCountsHash[item.key]"></app-text-input>
+          <app-number-input [(model)]="itemCountsHash[item.key]"></app-number-input>
         </li>
         <li class="name">
           <img [attr.src]="item.imagePath" />

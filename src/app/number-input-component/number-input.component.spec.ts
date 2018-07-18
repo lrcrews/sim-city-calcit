@@ -2,16 +2,16 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 
-import { TextInputComponent } from "./text-input.component";
+import { NumberInputComponent } from "./number-input.component";
 
-describe("TextInputComponent", () => {
-  let component: TextInputComponent;
-  let fixture: ComponentFixture<TextInputComponent>;
+describe("NumberInputComponent", () => {
+  let component: NumberInputComponent;
+  let fixture: ComponentFixture<NumberInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        TextInputComponent
+        NumberInputComponent
       ],
       schemas: [
         NO_ERRORS_SCHEMA
@@ -20,7 +20,7 @@ describe("TextInputComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextInputComponent);
+    fixture = TestBed.createComponent(NumberInputComponent);
     component = fixture.debugElement.componentInstance;
   });
 
