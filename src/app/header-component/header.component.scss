@@ -31,7 +31,14 @@ section#header-component {
 
     @media (max-width: $smaller-view) {
       left: 20px;
-      width: 320px;
+      padding: 16px;
+      width: 280px;
+    }
+
+    @media (max-width: $smallest-view) {
+      left: 12px;
+      padding: 12px;
+      top: 32px;
     }
 
     > h1 {
@@ -42,6 +49,10 @@ section#header-component {
       @media (max-width: $smaller-view) {
         font-size: $large;
         line-height: 24px;
+      }
+
+      @media (max-width: $smallest-view) {
+        font-size: $normal;
       }
 
       > em {
@@ -84,6 +95,7 @@ section#header-component {
 
           @media (max-width: $smaller-view) {
             padding-left: 8px;
+            @include small-font-style;
           }
 
           > img {
@@ -98,6 +110,7 @@ section#header-component {
 
           @media (max-width: $smaller-view) {
             padding-left: 8px;
+            @include tiny-font-style;
           }
 
           > img {

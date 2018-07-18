@@ -16,8 +16,16 @@ section.producer-level-select-component {
   > div {
     padding-left: 8px;
 
+    > i,
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     > i {
       cursor: pointer;
+      font-size: $huge;
+      margin-left: 4px;
 
       &.empty {
         color: $star-empty;
@@ -33,11 +41,20 @@ section.producer-level-select-component {
     }
 
     > span {
-      @include tiny-font-style;
+      @include small-font-style;
+      margin-left: 12px;
 
       &.link {
         color: $font-link;
       }
+    }
+  }
+
+  > section {
+    @include large-font-style;
+
+    > span {
+      @include small-font-style;
     }
   }
 }
