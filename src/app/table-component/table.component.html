@@ -15,9 +15,6 @@
             (onBoostMultiplierChange)="updateBoostMultiplier($event)">
           </app-boost-select>
         </div>
-        <div *ngIf="producer.isFactory()">
-          {{ producer.activeQueues }} Production Slots
-        </div>
       </li>
     </ul>
   </header>

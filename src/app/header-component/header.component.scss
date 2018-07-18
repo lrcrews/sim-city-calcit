@@ -29,10 +29,20 @@ section#header-component {
     top: 40px;
     width: 350px;
 
+    @media (max-width: $smaller-view) {
+      left: 20px;
+      width: 320px;
+    }
+
     > h1 {
       @include huge-font-style;
       margin: 0;
       padding: 0 0 12px 0;
+
+      @media (max-width: $smaller-view) {
+        font-size: $large;
+        line-height: 24px;
+      }
 
       > em {
         
@@ -49,9 +59,18 @@ section#header-component {
       > li {
         font-style: oblique;
 
+        @media (max-width: $smaller-view) {
+          display: inline-block;
+          vertical-align: bottom;
+        }
+
         &:nth-child(1) {
           @include tiny-font-style;
           padding-left: 60px;
+
+          @media (max-width: $smaller-view) {
+            padding-left: 8px;
+          }
 
           > img {
             height: 12px;
@@ -63,6 +82,10 @@ section#header-component {
           @include normal-font-style;
           padding-left: 120px;
 
+          @media (max-width: $smaller-view) {
+            padding-left: 8px;
+          }
+
           > img {
             height: 20px;
             width: 20px;
@@ -72,6 +95,10 @@ section#header-component {
         &:nth-child(3) {
           @include small-font-style;
           padding-left: 20px;
+
+          @media (max-width: $smaller-view) {
+            padding-left: 8px;
+          }
 
           > img {
             height: 16px;
@@ -85,6 +112,10 @@ section#header-component {
       @include large-font-style;
       margin: 12px 0 0 0;
       padding: 0;
+
+      @media (max-width: $smaller-view) {
+        font-size: $normal;
+      }
 
       > img {
         height: 20px;

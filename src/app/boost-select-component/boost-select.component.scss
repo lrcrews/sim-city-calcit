@@ -10,6 +10,13 @@ section.boost-select-component {
     position: relative;
     width: 33px;
 
+    @media (max-width: $smaller-view) {
+      display: block;
+      height: 36px;
+      margin-bottom: 12px;
+      width: 30px;
+    }
+
     &.inactive {
 
       > div {
@@ -29,6 +36,10 @@ section.boost-select-component {
       position: absolute;
       width: 100%;
       z-index: 10;
+
+      @media (max-width: $smaller-view) {
+        border-radius: 18px;
+      }
     }
 
     > img {

@@ -2,6 +2,9 @@
   <img [attr.src]="producer.imagePath" />
   <div>
     {{ producer.name }}
+    <span *ngIf="producer.isFactory()">
+        ({{ producer.activeQueues }} Production Slots)
+    </span>
   </div>
   <div *ngIf="producer.isShop()">
     <i tabindex="1" 

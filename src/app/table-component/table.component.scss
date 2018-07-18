@@ -9,17 +9,28 @@ section.table-component {
 
       > li {
         @include large-font-style;
-
         display: inline-block;
         vertical-align: middle;
 
+        @media (max-width: $smaller-view) {
+          @include normal-font-style;
+        }
+
         &:first-child {
           width: 70%;
+
+          @media (max-width: $smaller-view) {
+            width: calc(100% - 50px);
+          }
         }
 
         &:last-child {
           text-align: right;
           width: 30%;
+
+          @media (max-width: $smaller-view) {
+            width: 50px;
+          }
         }
       }
     }

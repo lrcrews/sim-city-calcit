@@ -34,7 +34,10 @@ section.producer-level-select-component {
 
     > span {
       @include tiny-font-style;
-      color: $font-link;
+
+      &.link {
+        color: $font-link;
+      }
     }
   }
 }
