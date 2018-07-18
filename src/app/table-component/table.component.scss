@@ -72,7 +72,7 @@ section.table-component {
             width: 6%;
 
             @media (max-width: $smaller-view) {
-              width: 8%;
+              width: 11%;
             }
           }
 
@@ -80,7 +80,7 @@ section.table-component {
             width: 27%;
 
             @media (max-width: $smaller-view) {
-              width: 5%;
+              width: 8%;
 
               > div {
                 display: none;
@@ -97,7 +97,7 @@ section.table-component {
             width: 14%;
 
             @media (max-width: $smaller-view) {
-              width: 18%;
+              width: 20%;
             }
           }
 
@@ -105,8 +105,8 @@ section.table-component {
             width: 20%;
 
             @media (max-width: $smaller-view) {
-              width: 26%;
-
+              width: 18%;
+              
               > div {
                 display: block;
               }
