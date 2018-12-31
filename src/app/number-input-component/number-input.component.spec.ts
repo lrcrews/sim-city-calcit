@@ -28,4 +28,25 @@ describe("NumberInputComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  describe("get model", () => {
+
+    it("should return the value of modelValue", () => {
+      component.modelValue = "foo bar";
+      expect(component.model).toEqual("foo bar");
+    });
+
+  });
+
+  describe("set model", () => {
+
+    it("should set the value of modelValue and emit it via modelChange", () => {
+      component.modelValue = "foo bar";
+      spyOn(component.modelChange, "emit");
+      component.model = "baz";
+      expect(component.modelValue).toEqual("baz");
+      expect(component.modelChange.emit).toHaveBeenCalledWith("baz");
+    });
+
+  });
+
 });

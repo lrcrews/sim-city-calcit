@@ -2,10 +2,6 @@
 
 <section id="about-page-component">
   
-  <header>
-    
-  </header>
-  
   <section>
     
     <!-- Ad for screens smaller than our ideal minimum width -->
@@ -41,7 +37,13 @@
         About
       </h2>
       <div>
-        Welcome! We're glad you made it to our SimCity BUILDIT<sup>TM</sup> 
+        Welcome! We're glad you made it to our SimCity BUILDIT<sup>TM</sup> calculator.
+      </div>
+      <div>
+        On this site you'll find <span class="link" tabindex="0" (click)="navigateToHomePage()" (keyup.enter)="navigateToHomePage()">interactive tables</span> that allow you to see how long it'll take to make the things you need.
+      </div>
+      <div>
+        For those technical users out there the source code of this site is <span class="link" tabindex="0" (click)="launchGithub()" (keyup.enter)="launchGithub()">available on GitHub</span> for viewing. This site is written in Angular, hosted on Heroku, and deployed via CircleCI.
       </div>
     </header>
 

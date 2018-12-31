@@ -12,9 +12,11 @@ import { ButtonComponent } from "./button-component/button.component";
 import { FooterComponent } from "./footer-component/footer.component";
 import { HeaderComponent } from "./header-component/header.component";
 import { NumberInputComponent } from "./number-input-component/number-input.component";
+import { PrivacyPolicyPageComponent } from "./privacy-policy-page-component/privacy-policy-page.component";
 import { ProducerLevelSelectComponent } from "./producer-level-select-component/producer-level-select.component";
 import { TableComponent } from "./table-component/table.component";
 import { TablesPageComponent } from "./tables-page-component/tables-page.component";
+import { TermsPageComponent } from "./terms-page-component/terms-page.component";
 
 import { ConfigurationService } from "./services/configuration.service";
 import { ScBuilditApiService } from "./services/sc-buildit-api.service";
@@ -31,9 +33,11 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     FooterComponent,
     HeaderComponent,
     NumberInputComponent,
+    PrivacyPolicyPageComponent,
     ProducerLevelSelectComponent,
     TableComponent,
     TablesPageComponent,
+    TermsPageComponent,
   ],
   imports: [
     BrowserModule,

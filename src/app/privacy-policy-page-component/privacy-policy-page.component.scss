@@ -1,0 +1,41 @@
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+@import "../../assets/stylesheets/mixins/mixins.scss";
+
+section#privacy-policy-page-component {
+  background-color: $background-tile;
+  border-top: 1px solid $border-black;
+  box-shadow: 0 1px 2px 0 rgba(70, 80, 100, 0.6);
+  margin-bottom: 80px;
+  min-height: 420px;
+  padding-bottom: 40px;
+  position: relative;
+
+  > h1,
+  > h2,
+  > h3 {
+    margin: 40px 20px 20px;
+
+    @media (max-width: $small-view) {
+      margin-top: 20px;
+    }
+    
+    @media (max-width: $smaller-view) {
+      margin: 20px 12px;
+    }
+  }
+
+  h2 {
+    @include huge-font-style;
+  }
+
+  > p,
+  > ol {
+    @include normal-font-style;
+    padding: 8px 20px;
+
+    @media (max-width: $smaller-view) {
+      padding: 20px 12px;
+    }
+  }
+}

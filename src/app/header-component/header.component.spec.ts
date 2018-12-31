@@ -1,5 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
+import { APP_BASE_HREF } from "@angular/common";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { Router, RouterModule } from "@angular/router";
+
 import { HeaderComponent } from "./header.component";
 
 describe("HeaderComponent", () => {
@@ -11,6 +15,15 @@ describe("HeaderComponent", () => {
       declarations: [
         HeaderComponent
       ],
+      imports: [
+        RouterModule.forRoot([])
+      ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: "/" }
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     }).compileComponents();
   }));
 
@@ -21,6 +34,17 @@ describe("HeaderComponent", () => {
 
   it("should be created", () => {
     expect(component).toBeTruthy();
+  });
+
+  describe("navigateToHomePage", () => {
+
+    it("should call Router's navigateByUrl method with '/'", () => {
+      const router = TestBed.get(Router);
+      spyOn(router, "navigateByUrl");
+      component.navigateToHomePage();
+      expect(router.navigateByUrl).toHaveBeenCalledWith("/");
+    });
+
   });
 
   describe("launchGithub", () => {
