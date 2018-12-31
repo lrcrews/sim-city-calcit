@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 import { ConfigurationService } from "../services/configuration.service";
-import { NavigationComponent } from "../navigation-component/navigation.component";
 import { TablesPageComponent } from "./tables-page.component";
 
 describe("TablesPageComponent", () => {
@@ -33,10 +32,26 @@ describe("TablesPageComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  describe("activeTabName", () => {
+  describe("toggleFactories", () => {
 
-    it("should return the constant for the tables page tab", () => {
-      expect(component.activeTabName()).toEqual(NavigationComponent.TABLES_TAB);
+    it("should toggle the value of factoriesVisible", () => {
+      component.factoriesVisible = false;
+      component.toggleFactories();
+      expect(component.factoriesVisible).toBeTruthy();
+      component.toggleFactories();
+      expect(component.factoriesVisible).toBeFalsy();
+    });
+
+  });
+
+  describe("toggleShops", () => {
+
+    it("should toggle the value of shopsVisible", () => {
+      component.shopsVisible = false;
+      component.toggleShops();
+      expect(component.shopsVisible).toBeTruthy();
+      component.toggleShops();
+      expect(component.shopsVisible).toBeFalsy();
     });
 
   });

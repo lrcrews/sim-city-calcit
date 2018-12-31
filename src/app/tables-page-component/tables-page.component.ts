@@ -2,8 +2,9 @@ import { Component, OnInit } from "@angular/core";
 
 import { ConfigurationService } from "../services/configuration.service";
 import { GoogleAnalyticsClient } from "../utils/google-analytics-client";
-import { NavigationComponent } from "../navigation-component/navigation.component";
 import { Producer } from "../models/producer";
+
+import * as _ from "lodash";
 
 @Component({
   styleUrls: [ "./tables-page.component.scss" ],
@@ -11,7 +12,11 @@ import { Producer } from "../models/producer";
 })
 
 export class TablesPageComponent implements OnInit {
-  producers: Array<Producer>;
+  factories: Array<Producer>;
+  shops: Array<Producer>;
+
+  factoriesVisible = false;
+  shopsVisible = true;
 
   constructor(private _configurationService: ConfigurationService) { }
 
@@ -20,13 +25,18 @@ export class TablesPageComponent implements OnInit {
     this._watchForProducers();
   }
 
-  activeTabName(): string {
-    return NavigationComponent.TABLES_TAB;
+  toggleFactories(): void {
+    this.factoriesVisible = !this.factoriesVisible;
+  }
+
+  toggleShops(): void {
+    this.shopsVisible = !this.shopsVisible;
   }
 
   private _watchForProducers(): void {
     this._configurationService.producers.subscribe( producers => {
-      this.producers = producers;
+      this.factories = _.filter(producers, producer => producer.isFactory());
+      this.shops = _.filter(producers, producer => producer.isShop());
     });
   }
 

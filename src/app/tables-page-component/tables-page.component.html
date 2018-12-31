@@ -2,10 +2,6 @@
 
 <section id="tables-page-component">
   
-  <header>
-    <app-navigation [activeTab]="activeTabName()"></app-navigation>
-  </header>
-  
   <section>
     
     <!-- Ad for screens smaller than our ideal minimum width -->
@@ -43,8 +39,23 @@
       <div>
         Below you'll find tables for every Industrial Building and every Commercial Building, with a break down of the items those building make. You can change the number of items at the start of each row to see how long it takes to make <em>how every many you</em> want to make (and how that impacts total cost, profit, and time)!
       </div>
-      <ul>
-        <li *ngFor="let producer of producers">
+      <section tabindex="0" (click)="toggleFactories()" (keyup.enter)="toggleFactories()">
+        Factories
+        <i class="fas fa-angle-down" *ngIf="factoriesVisible"></i>
+        <i class="fas fa-angle-up" *ngIf="!factoriesVisible"></i>
+      </section>
+      <ul [ngClass]="{ visible: factoriesVisible }">
+        <li *ngFor="let producer of factories">
+          <app-table [producer]="producer"></app-table>
+        </li>
+      </ul>
+      <section tabindex="0" (click)="toggleShops()" (keyup.enter)="toggleShops()">
+        Shops
+        <i class="fas fa-angle-down" *ngIf="shopsVisible"></i>
+        <i class="fas fa-angle-up" *ngIf="!shopsVisible"></i>
+      </section>
+      <ul [ngClass]="{ visible: shopsVisible }">
+        <li *ngFor="let producer of shops">
           <app-table [producer]="producer"></app-table>
         </li>
       </ul>
