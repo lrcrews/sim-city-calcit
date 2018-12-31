@@ -1,6 +1,7 @@
 import { inject, TestBed } from "@angular/core/testing";
 
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
+
 import { ScBuilditApiService } from "../sc-buildit-api.service";
 
 describe("ScBuilditApiService", () => {
@@ -8,7 +9,7 @@ describe("ScBuilditApiService", () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpModule
+        HttpClientModule
       ],
       providers: [
         ScBuilditApiService

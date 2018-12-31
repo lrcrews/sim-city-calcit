@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-import { Http, Response } from "@angular/http";
+import { HttpClient } from "@angular/common/http";
 
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -11,7 +11,7 @@ import { Producer } from "../models/producer";
 @Injectable()
 export class ScBuilditApiService {
 
-  constructor(private _http: Http) { }
+  constructor(private _http: HttpClient) { }
 
   items(): Observable<Array<Item>> {
     const url = this._mockItemsJsonPath();
@@ -31,19 +31,17 @@ export class ScBuilditApiService {
     return "../../assets/producers-response.json";
   }
 
-  private _onItemsResponse(response: Response): Array<Item> {
-    const json = response.json();
-    if (json) {
-      return Item.arrayFromJsonArray(json["items"]);
+  private _onItemsResponse(response): Array<Item> {
+    if (response) {
+      return Item.arrayFromJsonArray(response["items"]);
     } else {
       return [];
     }
   }
 
-  private _onProducersResponse(response: Response): Array<Producer> {
-    const json = response.json();
-    if (json) {
-      return Producer.arrayFromJsonArray(json["producers"]);
+  private _onProducersResponse(response): Array<Producer> {
+    if (response) {
+      return Producer.arrayFromJsonArray(response["producers"]);
     } else {
       return [];
     }

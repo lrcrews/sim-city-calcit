@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
+import { HttpClientModule } from "@angular/common/http";
 import { NO_ERRORS_SCHEMA } from "@angular/core";
-import { HttpModule } from "@angular/http";
 
-import { Observable } from "rxjs";
-import { of } from "rxjs";
+import { Observable ,  of } from "rxjs";
 
 import { AppComponent } from "./app.component";
 import { Item } from "../models/item";
@@ -34,7 +33,7 @@ describe("AppComponent", () => {
         AppComponent
       ],
       imports: [
-        HttpModule
+        HttpClientModule
       ],
       providers: [
         ConfigurationService,

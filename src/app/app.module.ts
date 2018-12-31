@@ -1,10 +1,11 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { CalcitRoutingModule } from "./app-routing.module";
 
+import { AboutPageComponent } from "./about-page-component/about-page.component";
 import { AppComponent } from "./app-component/app.component";
 import { BoostSelectComponent } from "./boost-select-component/boost-select.component";
 import { ButtonComponent } from "./button-component/button.component";
@@ -25,6 +26,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     AppComponent
   ],
   declarations: [
+    AboutPageComponent,
     AppComponent,
     BoostSelectComponent,
     ButtonComponent,
@@ -41,7 +43,7 @@ import { ScBuilditApiService } from "./services/sc-buildit-api.service";
     BrowserModule,
     CalcitRoutingModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
   ],
   providers: [
     ConfigurationService,
