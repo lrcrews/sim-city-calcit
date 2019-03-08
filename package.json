@@ -5,12 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --configuration=production",
+    "build": "ng build --aot --configuration=production",
     "test": "ng test --code-coverage",
     "circleci-test": "ng test --watch=false",
     "lint": "tslint \"src/app/**/*.ts\"",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --configuration=production"
+    "e2e": "ng e2e"
   },
   "private": true,
   "engines": {
@@ -54,5 +53,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.2",
     "ts-node": "~7.0.1"
-  }
+  },
+  "heroku-run-build-script": true
 }
